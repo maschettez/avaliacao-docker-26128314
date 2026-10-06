@@ -8,7 +8,7 @@ services:
       - agrovale
 
   blog:
-    image: wordpress:latest
+    image: wordpress:6-apache
     ports:
       - "9014:80"
     environment:
@@ -25,7 +25,7 @@ services:
       - agrovale
 
   db:
-    image: mariadb:11
+    image: mariadb:11.4
     environment:
       MARIADB_DATABASE: ${MARIADB_DATABASE}
       MARIADB_USER: ${MARIADB_USER}
